@@ -47,7 +47,7 @@ function Navbar() {
       <div
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 fixed bg-[#141313] md:w-[280px] z-50 md:max-w-[280px] h-full min-h-screen px-8 lg:py-6 py-6 transition-transform duration-300 ease-in-out`}
+        } lg:translate-x-0 fixed bg-[#141313] md:w-[280px] z-50 md:max-w-[280px] w-full h-full min-h-screen px-8 lg:py-6 py-6 transition-transform duration-300 ease-in-out`}
       >
         <div className={`fixed top-5 lg:hidden right-5 z-50`}>
           <IconButton onClick={toggleNavbar} className="text-white">
@@ -58,7 +58,7 @@ function Navbar() {
         <h1 className="text-[#FFFFFF] font-bold text-2xl font-plexSerif">
           Jac.
         </h1>
-        <ul className="text-[#FFFFFF] flex flex-col gap-3 py-10 text-[16px] leading-[30px] font-bold font-plexSans">
+        <ul className="text-[#FFFFFF] flex flex-col gap-3 py-8 text-[16px] leading-[30px] font-bold font-plexSans">
           {navItems.map((item) => (
             <li
               key={item}
@@ -77,12 +77,28 @@ function Navbar() {
             </li>
           ))}
         </ul>
-        <div>
-          <img
-            src="../assets/Socails.png"
-            className="text-white"
-            alt="Socials"
-          />
+        <div className="flex flex-col gap-2">
+          <div className="bg-white rounded-full w-12 h-12 p-3">
+            <img
+              src="../assets/e8.png"
+              className="w-full h-full object-contain"
+              alt="Socials"
+            />
+          </div>
+          <div className="bg-white rounded-full w-12 h-12 p-3">
+            <img
+              src="../assets/e9.png"
+              className="w-full h-full object-contain"
+              alt="Socials"
+            />
+          </div>
+          <div className="bg-white rounded-full w-12 h-12 p-3">
+            <img
+              src="../assets/e10.png"
+              className="w-full h-full object-contain"
+              alt="Socials"
+            />
+          </div>
         </div>
         <p className="font-plexSans text-base py-6 text-[#FFFFFF]">
           Copyright ©2023 Jacob Jones. All rights reserved.
