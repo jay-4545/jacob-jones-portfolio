@@ -7,6 +7,7 @@ import Services from "./pages/Services";
 import Works from "./pages/Works";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
+      <ToastContainer />
     </BrowserRouter>
   );
 }

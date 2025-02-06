@@ -25,6 +25,27 @@ export const workData = [
   },
 ];
 
+export const workTextSlide = [
+  {
+    id: 1,
+    title: "-Larry Diamond",
+    text: "Chief Executive Officer, Besnik",
+    desc: "“ File storage made easy – including powerful features you won’t find anywhere else. Whether you’re.”",
+  },
+  {
+    id: 2,
+    title: "-Larry Diamond 1",
+    text: "Chief Executive Officer, Besnik",
+    desc: "“ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita maxime saepe ducimus at pariatur! Fugit laudantium aliquam veritatis ad quia.”",
+  },
+  {
+    id: 3,
+    title: "-Larry Diamond 2",
+    text: "Chief Executive Officer, Besnik",
+    desc: "“ File storage made easy – including powerful features you won’t find anywhere else. Whether you’re.”",
+  },
+];
+
 export const workSlideImg = [
   {
     id: 1,

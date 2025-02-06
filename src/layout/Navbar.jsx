@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate, useLocation } from "react-router-dom";
-import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import MenuIcon from "@mui/icons-material/Menu";
 import { IconButton } from "@mui/material";
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import { navbarData } from "../data/navbarData";
 
 function Navbar() {
   const location = useLocation();
@@ -47,7 +49,7 @@ function Navbar() {
       <div
         className={`${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 fixed bg-[#141313] md:w-[280px] z-50 md:max-w-[280px] w-full h-full min-h-screen px-8 lg:py-6 py-6 transition-transform duration-300 ease-in-out`}
+        } lg:translate-x-0 fixed bg-[#141313] md:w-[280px] z-50 md:max-w-[280px] w-full h-full min-h-screen px-8 lg:py-10 py-6 transition-transform duration-300 ease-in-out`}
       >
         <div className={`fixed top-5 lg:hidden right-5 z-50`}>
           <IconButton onClick={toggleNavbar} className="text-white">
@@ -55,15 +57,20 @@ function Navbar() {
           </IconButton>
         </div>
 
-        <h1 className="text-[#FFFFFF] font-bold text-2xl font-plexSerif">
+        <h1
+          className="text-[#FFFFFF] font-bold text-2xl font-plexSerif cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           Jac.
         </h1>
-        <ul className="text-[#FFFFFF] flex flex-col gap-3 py-8 text-[16px] leading-[30px] font-bold font-plexSans">
+        <ul className="text-[#FFFFFF] flex flex-col gap-3 py-8 text-[16px] leading-[30px] font-plexSans">
           {navItems.map((item) => (
             <li
               key={item}
               onClick={() => handleLinkActive(item)}
-              className="relative cursor-pointer z-10"
+              className={`relative cursor-pointer z-10 ${
+                active === item ? "font-bold" : ""
+              }`}
             >
               {item.toUpperCase()}
               {active === item && (
@@ -78,27 +85,20 @@ function Navbar() {
           ))}
         </ul>
         <div className="flex flex-col gap-2">
-          <div className="bg-white rounded-full w-12 h-12 p-3">
-            <img
-              src="../assets/e8.png"
-              className="w-full h-full object-contain"
-              alt="Socials"
-            />
-          </div>
-          <div className="bg-white rounded-full w-12 h-12 p-3">
-            <img
-              src="../assets/e9.png"
-              className="w-full h-full object-contain"
-              alt="Socials"
-            />
-          </div>
-          <div className="bg-white rounded-full w-12 h-12 p-3">
-            <img
-              src="../assets/e10.png"
-              className="w-full h-full object-contain"
-              alt="Socials"
-            />
-          </div>
+          {navbarData.map((item, index) => {
+            return (
+              <motion.a
+                href={item.link}
+                target="_blank"
+                key={index}
+                className="bg-white rounded-full w-max p-3 text-center cursor-pointer hover:bg-gradient-to-tr from-[#B86ADF] via-[#FF6C63] to-[#FFB147]"
+                whileHover={{ rotate: 10, scale: 1.1 }}
+                transition={{ duration: 0.5, delay: 0.1 + index * 0.2 }}
+              >
+                {item.icon}
+              </motion.a>
+            );
+          })}
         </div>
         <p className="font-plexSans text-base py-6 text-[#FFFFFF]">
           Copyright ©2023 Jacob Jones. All rights reserved.
