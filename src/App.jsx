@@ -1,13 +1,13 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import Layout from "./layout/Layout";
-import Home from "./pages/Home";
 import About from "./pages/About";
-import Services from "./pages/Services";
-import Works from "./pages/Works";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
-import { ToastContainer } from "react-toastify";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Works from "./pages/Works";
 
 function App() {
   return (
