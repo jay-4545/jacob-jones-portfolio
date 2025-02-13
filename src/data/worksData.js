@@ -6,23 +6,71 @@ export const workData = [
     img: "/assets/work1.png",
   },
   {
-    id: 1,
+    id: 2,
     title: "UX case study",
     desc: "Bally Website Research",
     img: "/assets/work2.png",
   },
   {
-    id: 1,
+    id: 3,
     title: "UX case study",
     desc: "Bally Website Research",
     img: "/assets/work3.png",
   },
   {
-    id: 1,
+    id: 4,
     title: "UX case study",
     desc: "Bally Website Research",
     img: "/assets/work4.png",
   },
+  // {
+  //   id: 5,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work1.png",
+  // },
+  // {
+  //   id: 6,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work2.png",
+  // },
+  // {
+  //   id: 7,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work3.png",
+  // },
+  // {
+  //   id: 8,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work4.png",
+  // },
+  // {
+  //   id: 9,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work1.png",
+  // },
+  // {
+  //   id: 10,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work2.png",
+  // },
+  // {
+  //   id: 11,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work3.png",
+  // },
+  // {
+  //   id: 12,
+  //   title: "UX case study",
+  //   desc: "Bally Website Research",
+  //   img: "/assets/work4.png",
+  // },
 ];
 
 export const workTextSlide = [

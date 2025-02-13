@@ -1,6 +1,6 @@
 import { NorthEast } from "@mui/icons-material";
 import { Button } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { blogData } from "../data/blogData";
 import { motion } from "framer-motion";
 

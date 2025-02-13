@@ -48,6 +48,7 @@ function Services() {
                   isOpen ? "bg-[#B86ADF]" : "bg-black"
                 }`}
               ></div>
+
               <h1
                 className={`text-lg md:text-xl font-bold ${
                   isOpen

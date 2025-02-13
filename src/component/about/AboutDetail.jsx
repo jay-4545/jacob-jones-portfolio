@@ -33,20 +33,25 @@ function AboutDetail() {
           Hello there! My name is Jacob Jones. I am a web designer & developer,
           and I'm very passionate and dedicated to my work.
         </motion.p>
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 1 }}
           transition={{ duration: 1, delay: 0.4 }}
         >
           <Button
-            href="/pdf/resume.pdf"
-            download="resume.pdf"
+            component="span"
             className="!bg-[#141313] !rounded-none md:!text-[15px] !text-xs !text-white flex gap-2 md:h-12 h-10 md:w-[248px] w-[210px]"
           >
-            Download my resume
-            <NorthEast className="bg-gradient-to-r from-[#FFB147]  md:!w-6 md:!h-6 !w-4 !h-4 via-[#FF6C63] to-[#B86ADF] text-white" />
+            <a
+              href="/pdf/resume.pdf"
+              download="resume.pdf"
+              className="flex items-center gap-2"
+            >
+              Download my resume
+              <NorthEast className="bg-gradient-to-r from-[#FFB147] md:!w-6 md:!h-6 !w-4 !h-4 via-[#FF6C63] to-[#B86ADF] text-white" />
+            </a>
           </Button>
-        </motion.a>
+        </motion.div>
       </div>
       <div className="flex flex-col gap-12">
         {aboutData.map((value, index) => {
