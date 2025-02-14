@@ -59,7 +59,10 @@ function Navbar() {
 
         <h1
           className="text-[#FFFFFF] font-bold text-2xl font-plexSerif cursor-pointer"
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            toggleNavbar();
+          }}
         >
           Jac.
         </h1>
